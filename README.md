@@ -1,35 +1,51 @@
-# SmartFlow — Site One-Page (Vite + React + TS + Tailwind)
+# 🌐 SmartFlow.website
 
-## Prérequis
-- Node.js LTS (>=18)
-- npm
+Site officiel de **SmartFlow** — présentation de notre offre en développement logiciel sur mesure, notre méthode de travail et un formulaire de contact.  
+Le site est pensé pour être clair, fluide et professionnel, avec un design moderne en violet.
 
-## Installation & lancement local
+## 🚀 Aperçu
+
+- **Sections**
+  - Accueil (hero + CTA)
+  - Qui nous sommes
+  - Offre (logiciels sur mesure)
+  - Méthode (processus de travail)
+  - Contact (formulaire Formspree)
+
+- **Stack**
+  - [Vite](https://vitejs.dev/) + [React](https://react.dev/) + TypeScript
+  - TailwindCSS pour le style
+  - Déploiement continu via **GitHub Pages**
+
+## 📦 Installation locale
+
 ```bash
+git clone https://github.com/hugogebel-boop/SmartFlow.website.git
+cd SmartFlow.website
 npm install
 npm run dev
 ```
-Ouvre ensuite l’URL affichée (souvent http://localhost:5173).
 
-## Déploiement GitHub Pages (automatique via GitHub Actions)
-1. Crée un repository GitHub **public** (ex: `smrtflow-site`).
-2. Pousse ce dossier sur GitHub :
-   ```bash
-   git init
-   git add .
-   git commit -m "init smartflow site"
-   git branch -M main
-   git remote add origin https://github.com/<TON_USER>/<TON_REPO>.git
-   git push -u origin main
-   ```
-3. Dans GitHub, va dans **Settings → Pages** : vérifie que la **Source** est réglée sur "Deploy from a branch" ou via **GitHub Actions**. Ce projet inclut déjà un workflow qui build & publie automatiquement.
-4. Le workflow publiera sur la branche **gh-pages** et activera Pages.
+Ouvrir [http://localhost:5173](http://localhost:5173).
 
-### Base path (assets) pour Pages
-Vite a besoin d’un `base` correct. Ici, on le déduit automatiquement à partir de `GITHUB_REPOSITORY` en CI (voir `vite.config.ts`). Pas besoin de changer manuellement.
+## 🌍 Déploiement
 
-## Déploiement manuel (optionnel)
-Tu peux aussi faire `npm run build` puis servir le dossier `dist` avec un hébergeur statique.
+Le site est automatiquement déployé via **GitHub Actions** sur :
 
-## Modifier le contenu
-La page principale est dans `src/App.tsx`. Le style Tailwind est déjà configuré.
+👉 [https://hugogebel-boop.github.io/SmartFlow.website/](https://hugogebel-boop.github.io/SmartFlow.website/)
+
+### Workflow utilisé
+- `vite.config.ts` configure correctement la base pour GitHub Pages.
+- `pages.yml` construit le site puis publie dans GitHub Pages.
+- Un fallback `404.html` est créé pour supporter la navigation type SPA.
+
+## 👤 Auteur
+
+Développé par **Hugo Gebel**  
+Étudiant ingénieur civil, passionné par le développement logiciel et la création d’outils sur mesure.
+
+📫 Contact : [hugogebel@epfl.ch](mailto:hugogebel@epfl.ch)
+
+---
+
+✨ *SmartFlow : des logiciels qui servent le métier, pas l’inverse.*
